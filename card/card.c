@@ -9,7 +9,7 @@ EN_cardError_t getCardHolderName(ST_cardData_t *cardData)
     char a[100];
     gets(a);
     int size = strlen(a);
-    if(size>50 || size<20)
+    if(size>24 || size<20)
     {
         return WRONG_NAME;
     }
