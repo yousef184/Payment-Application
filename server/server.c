@@ -91,12 +91,14 @@ void listSavedTransactions(void)
         printf("#########################\n");
         printf("Transaction Sequence Number: %d\n",i+1);
         printf("Transaction Date: %s\n",transactionsDB[i].terminalData.transactionDate);
-        printf("Transaction Amount: %f\n",transactionsDB[i].terminalData.transAmount);
+        printf("New Account Balance: %.2f\n",accountsDB[i].balance);
+        printf("Transaction Amount: %.2f\n",transactionsDB[i].terminalData.transAmount);
         printf("Transaction State: %d\n",transactionsDB[i].transState);
-        printf("Terminal Max Amount: %f\n",transactionsDB[i].terminalData.maxTransAmount);
+        printf("Terminal Max Amount: %.2f\n",transactionsDB[i].terminalData.maxTransAmount);
         printf("Cardholder Name: %s\n",transactionsDB[i].cardHolderData.cardHolderName);
         printf("PAN: %s\n",transactionsDB[i].cardHolderData.primaryAccountNumber);
         printf("Card Expiration Date: %s\n",transactionsDB[i].cardHolderData.cardExpirationDate);
         printf("#########################\n");
     }
 }
+
